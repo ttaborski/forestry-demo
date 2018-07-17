@@ -4,12 +4,21 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 collections:
-  _projects:
-    default_front_matter_template: project
-  _people:
-    default_front_matter_template: person
-  _posts:
-    default_front_matter_template: post
+- path: _posts
+  label: Posts
+  create: all
+  default_front_matter_template: post
+- path: _people
+  label: People
+  create: all
+  default_front_matter_template: person
+- path: ''
+  label: Pages
+  create: all
+- path: _projects
+  label: Projects
+  create: all
+  default_front_matter_template: project
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
